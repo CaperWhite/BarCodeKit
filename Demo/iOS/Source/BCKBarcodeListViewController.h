@@ -8,6 +8,8 @@
 
 @class BCKBarcodeViewController;
 
+#import <UIKit/UIKit.h>
+
 @interface BCKBarcodeListViewController : UITableViewController
 
 @property (strong, nonatomic) BCKBarcodeViewController *detailViewController;

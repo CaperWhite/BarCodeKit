@@ -6,6 +6,12 @@
 //  Copyright (c) 2013 Oliver Drobnik. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
+
+#import <UIKit/UIKit.h>
+
 @class BCKCode;
 
 /**
@@ -26,3 +32,5 @@
 + (UIImage *)imageWithBarCode:(BCKCode *)barCode options:(NSDictionary *)options;
 
 @end
+
+#endif

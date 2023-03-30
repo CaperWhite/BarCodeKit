@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 Oliver Drobnik. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 #import "BCKCodeCharacter.h"
-#import "BCKCode128ContentCodeCharacter.h"
 
 /**
  Supported Code128 versions

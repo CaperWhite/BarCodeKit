@@ -7,10 +7,19 @@
 //
 
 #import "BCKCode.h"
-#import "BarCodeKit.h"
 #import "NSError+BCKCode.h"
+#import "BCKMutableBarString.h"
+#import "BCKBarString.h"
+#import "BCKCodeCharacter.h"
+#import "BCKGTINCode.h"
 
 #import <CoreText/CoreText.h>
+
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
 
 // options
 NSString * const BCKCodeDrawingBarScaleOption = @"BCKCodeDrawingBarScale";

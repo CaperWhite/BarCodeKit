@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Oliver Drobnik. All rights reserved.
 //
 
+#import <XCTest/XCTest.h>
+
 #import "BCKEAN8Code.h"
 #import "BCKCodeCharacter.h"
 
