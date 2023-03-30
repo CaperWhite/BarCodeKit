@@ -9,6 +9,7 @@
 #import "BCKEAN5SupplementCode.h"
 #import "BCKGTINSupplementDataCodeCharacter.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 @implementation BCKEAN5SupplementCode
 
@@ -107,7 +108,7 @@
     {
         if (error)
         {
-            NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ requires content strings with exactly 5 characters", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."),  [[self class] barcodeDescription]];
+            NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ requires content strings with exactly 5 characters", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."),  [[self class] barcodeDescription]];
             *error = [NSError BCKCodeErrorWithMessage:message];
         }
         
@@ -120,7 +121,7 @@
     if (!([character rangeOfCharacterFromSet:invalidFirstDigits].location == NSNotFound)) {
         if (error)
         {
-            NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ requires the first digit to be a 0, 1, 3, 4, 5 or 6", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."),  [[self class] barcodeDescription]];
+            NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ requires the first digit to be a 0, 1, 3, 4, 5 or 6", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."),  [[self class] barcodeDescription]];
             *error = [NSError BCKCodeErrorWithMessage:message];
         }
         
@@ -132,7 +133,7 @@
 	{
         if (error)
         {
-            NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ does not support alpha-numeric characters", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."),  [[self class] barcodeDescription]];
+            NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ does not support alpha-numeric characters", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."),  [[self class] barcodeDescription]];
             *error = [NSError BCKCodeErrorWithMessage:message];
         }
         
@@ -154,7 +155,7 @@
 		{
 			if (error)
 			{
-				NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Digit at index %d '%@' cannot be encoded in %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), (int)index, character, [[self class] barcodeDescription]];
+				NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Digit at index %d '%@' cannot be encoded in %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), (int)index, character, [[self class] barcodeDescription]];
 				*error = [NSError BCKCodeErrorWithMessage:message];
 			}
 			

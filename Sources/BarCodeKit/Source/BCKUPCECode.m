@@ -9,6 +9,7 @@
 #import "BCKUPCECode.h"
 #import "BCKEANCodeCharacter.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 // the variant pattern to use based on the check digit (last) and first digit
 static char *variant_patterns[10][2] = {{"EEEOOO", "OOOEEE"},  // 0
@@ -52,7 +53,7 @@ static char *variant_patterns[10][2] = {{"EEEOOO", "OOOEEE"},  // 0
 	{
 		if (error)
 		{
-			NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ requires content to be 8 digits", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+			NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ requires content to be 8 digits", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
 			*error = [NSError BCKCodeErrorWithMessage:message];
 		}
 		
@@ -70,7 +71,7 @@ static char *variant_patterns[10][2] = {{"EEEOOO", "OOOEEE"},  // 0
 			{
 				if (error)
 				{
-					NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ requires first digit to be 0 or 1", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+					NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ requires first digit to be 0 or 1", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
 					*error = [NSError BCKCodeErrorWithMessage:message];
 				}
 				
@@ -82,7 +83,7 @@ static char *variant_patterns[10][2] = {{"EEEOOO", "OOOEEE"},  // 0
 		{
 			if (error)
 			{
-				NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ cannot encode '%@' at index %d", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription], character, (int)index];
+				NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ cannot encode '%@' at index %d", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription], character, (int)index];
 				*error = [NSError BCKCodeErrorWithMessage:message];
 			}
 			

@@ -12,6 +12,7 @@
 #import "BCKBarString.h"
 #import "BCKCodeCharacter.h"
 #import "BCKGTINCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 #import <CoreText/CoreText.h>
 
@@ -55,7 +56,7 @@ NSString * const BCKCodeDrawingSuppressQuietZones = @"BCKCodeDrawingSuppressQuie
 		{
 			if (error)
 			{
-				NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Unable to encoded empty string in %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+				NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Unable to encoded empty string in %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
 				*error = [NSError BCKCodeErrorWithMessage:message];
 			}
 			

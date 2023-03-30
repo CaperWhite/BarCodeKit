@@ -11,8 +11,8 @@
 
 #import <AppKit/AppKit.h>
 
+#import "BCKCode.h"
 #import "NSImage+BarCodeKit.h"
-#import "BarCodeKit.h"
 
 @implementation NSImage (BarCodeKit)
 

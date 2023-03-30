@@ -9,6 +9,7 @@
 #import "BCKFacingIdentificationMarkCode.h"
 #import "BCKFacingIdentificationMarkCodeCharacter.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 @implementation BCKFacingIdentificationMarkCode
 {
@@ -24,7 +25,7 @@
 	{
 		if (error)
 		{
-			NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"'%@' is not a supported FIM type for %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), content, [[self class] barcodeDescription]];
+			NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"'%@' is not a supported FIM type for %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), content, [[self class] barcodeDescription]];
 			*error = [NSError BCKCodeErrorWithMessage:message];
 			
 			return nil;
@@ -70,7 +71,7 @@
 	
 	if (error)
 	{
-		NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%d is not a supported FIM type for %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), fimType, [[self class] barcodeDescription]];
+		NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%d is not a supported FIM type for %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), fimType, [[self class] barcodeDescription]];
 		*error = [NSError BCKCodeErrorWithMessage:message];
 	}
 	

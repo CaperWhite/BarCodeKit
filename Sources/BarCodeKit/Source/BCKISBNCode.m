@@ -8,6 +8,7 @@
 
 #import "BCKISBNCode.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 // source: http://isbn-international.org/pages/media/Usermanuals/ISBN%20Manual%202012%20-corr.pdf
 
@@ -130,7 +131,7 @@ typedef NS_ENUM(char, BCKISBNCodeRegularExpressionType) {
         {
             if (error)
             {
-                NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"The ISBN13 string does not have 13 characters", @"BarCodeKit", @"The error message displayed when unable to generate a barcode.")];
+                NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"The ISBN13 string does not have 13 characters", @"BarCodeKit", @"The error message displayed when unable to generate a barcode.")];
                 *error = [NSError BCKCodeErrorWithMessage:message];
             }
             
@@ -153,7 +154,7 @@ typedef NS_ENUM(char, BCKISBNCodeRegularExpressionType) {
             {
                 if (error)
                 {
-                    NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"The ISBN10 string does not have 10 characters", @"BarCodeKit", @"The error message displayed when unable to generate a barcode.")];
+                    NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"The ISBN10 string does not have 10 characters", @"BarCodeKit", @"The error message displayed when unable to generate a barcode.")];
                     *error = [NSError BCKCodeErrorWithMessage:message];
                 }
                 
@@ -165,7 +166,7 @@ typedef NS_ENUM(char, BCKISBNCodeRegularExpressionType) {
             // Could not match a valid ISBN10 or ISBN13 string
             if (error)
             {
-                NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"The string is not a valid ISBN10 or ISBN13 string supported by %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+                NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"The string is not a valid ISBN10 or ISBN13 string supported by %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
                 *error = [NSError BCKCodeErrorWithMessage:message];
             }
             
@@ -271,7 +272,7 @@ typedef NS_ENUM(char, BCKISBNCodeRegularExpressionType) {
         {
             if (error)
             {
-                NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"The string is not a valid ISBN10 string supported by %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+                NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"The string is not a valid ISBN10 string supported by %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
                 *error = [NSError BCKCodeErrorWithMessage:message];
             }
             
@@ -293,7 +294,7 @@ typedef NS_ENUM(char, BCKISBNCodeRegularExpressionType) {
         {
             if (error)
             {
-                NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"The string is not a valid ISBN13 string supported by %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+                NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"The string is not a valid ISBN13 string supported by %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
                 *error = [NSError BCKCodeErrorWithMessage:message];
             }
 
@@ -479,7 +480,7 @@ typedef NS_ENUM(char, BCKISBNCodeRegularExpressionType) {
         {
             if (error)
             {
-                NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Check digit '%@' is not correct for this ISBN10 string", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), checkDigit];
+                NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Check digit '%@' is not correct for this ISBN10 string", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), checkDigit];
                 *error = [NSError BCKCodeErrorWithMessage:message];
             }
             
@@ -505,7 +506,7 @@ typedef NS_ENUM(char, BCKISBNCodeRegularExpressionType) {
         {
             if (error)
             {
-                NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"The check digit '%@' is not correct for this ISBN13 string", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), checkDigit];
+                NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"The check digit '%@' is not correct for this ISBN13 string", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), checkDigit];
                 *error = [NSError BCKCodeErrorWithMessage:message];
             }
             

@@ -10,6 +10,7 @@
 #import "BCKMSICodeCharacter.h"
 #import "BCKMSIContentCodeCharacter.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 @implementation BCKMSICode
 {
@@ -109,7 +110,7 @@
 		{
 			if (error)
 			{
-				NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Character at index %d '%@' cannot be encoded in %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), (int)index, character, [[self class] barcodeDescription]];
+				NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Character at index %d '%@' cannot be encoded in %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), (int)index, character, [[self class] barcodeDescription]];
 				*error = [NSError BCKCodeErrorWithMessage:message];
 			}
             

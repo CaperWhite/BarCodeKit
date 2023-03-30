@@ -10,6 +10,7 @@
 #import "NSError+BCKCode.h"
 #import "BCKEANCodeCharacter.h"
 #import "BCKUPCCodeCharacter.h"
+#import "BCKLocalizedStringFromTable.h"
 
 @implementation BCKUPCACode
 
@@ -23,7 +24,7 @@
 	{
 		if (error)
 		{
-			NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ requires content to be 12 digits", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+			NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ requires content to be 12 digits", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
 			*error = [NSError BCKCodeErrorWithMessage:message];
 		}
 
@@ -41,7 +42,7 @@
 		{
 			if (error)
 			{
-				NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ cannot encode '%@' at index %d", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription], character, (int)index];
+				NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ cannot encode '%@' at index %d", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription], character, (int)index];
 				*error = [NSError BCKCodeErrorWithMessage:message];
 			}
 
@@ -68,7 +69,7 @@
 	if (calculatedCheck != inputCheckNumber) {
 		if (error)
 		{
-			NSString *message = NSLocalizedStringFromTable(@"Invalid barcode provided. Check number does not match", @"BarCodeKit", @"The error message displayed when unable to generate a barcode.");
+			NSString *message = BCKLocalizedStringFromTable(@"Invalid barcode provided. Check number does not match", @"BarCodeKit", @"The error message displayed when unable to generate a barcode.");
 			*error = [NSError BCKCodeErrorWithMessage:message];
 		}
 

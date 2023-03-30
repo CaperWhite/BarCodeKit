@@ -9,6 +9,7 @@
 #import "BCKEAN8Code.h"
 #import "BCKEANCodeCharacter.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 @implementation BCKEAN8Code
 
@@ -43,7 +44,7 @@
 	{
 		if (error)
 		{
-			NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ requires content to be 8 digits", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+			NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ requires content to be 8 digits", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
 			*error = [NSError BCKCodeErrorWithMessage:message];
 		}
 		
@@ -59,7 +60,7 @@
 		{
 			if (error)
 			{
-				NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ cannot encode '%@' at index %d", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription], character, (int)index];
+				NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ cannot encode '%@' at index %d", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription], character, (int)index];
 				*error = [NSError BCKCodeErrorWithMessage:message];
 			}
 			

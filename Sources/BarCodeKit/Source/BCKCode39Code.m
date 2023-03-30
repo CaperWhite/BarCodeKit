@@ -13,6 +13,7 @@
 #import "BCKCode39CodeCharacter.h"
 #import "BCKCode39ContentCodeCharacter.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 @implementation BCKCode39Code
 
@@ -41,7 +42,7 @@
 	{
 		if (error)
 		{
-			NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Content contains characters that cannot be encoded by Code39", @"BarCodeKit", @"The error message displayed when unable to generate a barcode.")];
+			NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Content contains characters that cannot be encoded by Code39", @"BarCodeKit", @"The error message displayed when unable to generate a barcode.")];
 			*error = [NSError BCKCodeErrorWithMessage:message];
 			return nil;
 		}

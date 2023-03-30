@@ -9,6 +9,7 @@
 #import "BCKCode128ContentCodeCharacter.h"
 #import "NSString+BCKCode128Helpers.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 NSUInteger const CODE_128_BINARY_INDEX = 3;
 NSUInteger const CODE_128_CHARACTERS_TABLE_SIZE = 103;
@@ -235,7 +236,7 @@ static NSArray *__charactersMap;
         {
 			if (error)
 			{
-				NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"String '%@' cannot be encoded in Code128. Character at index %d (%@) not supported", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), content, (int)index, characterString];
+				NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"String '%@' cannot be encoded in Code128. Character at index %d (%@) not supported", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), content, (int)index, characterString];
 				*error = [NSError BCKCodeErrorWithMessage:message];
 			}
 

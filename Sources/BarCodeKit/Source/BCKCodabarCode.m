@@ -10,6 +10,7 @@
 #import "BCKCodabarCodeCharacter.h"
 #import "BCKCodabarContentCodeCharacter.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 @implementation BCKCodabarCode
 
@@ -34,7 +35,7 @@
 	{
 		if (error)
 		{
-			message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ requires at least three characters", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+			message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ requires at least three characters", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
 			
 			if (error)
 			{
@@ -65,14 +66,14 @@
 			{
 				if (index==0)
 				{
-					message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Character at index %d '%@' is an invalid start character for %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), (int)index, character, [[self class] barcodeDescription]];
+					message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Character at index %d '%@' is an invalid start character for %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), (int)index, character, [[self class] barcodeDescription]];
 				}
 				else if (index==[content length]-1)
 				{
-					message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Character at index %d '%@' is an invalid stop character for %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), (int)index, character, [[self class] barcodeDescription]];
+					message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Character at index %d '%@' is an invalid stop character for %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), (int)index, character, [[self class] barcodeDescription]];
 				}
 				else {
-					message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Character at index %d '%@' cannot be encoded in %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), (int)index, character, [[self class] barcodeDescription]];
+					message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Character at index %d '%@' cannot be encoded in %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), (int)index, character, [[self class] barcodeDescription]];
 				}
 				
 				*error = [NSError BCKCodeErrorWithMessage:message];

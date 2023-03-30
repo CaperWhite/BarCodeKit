@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		65115BD329D5C448001C046D /* BCKLocalizedStringFromTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 65115BD229D5C448001C046D /* BCKLocalizedStringFromTable.h */; };
 		6C2AF51017D5EE3F00175AE0 /* BCKCode39FullASCII.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2AF50F17D5EE3F00175AE0 /* BCKCode39FullASCII.m */; };
 		6C2AF51217D5EEAD00175AE0 /* BCKCode39FullASCIITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2AF51117D5EEAD00175AE0 /* BCKCode39FullASCIITest.m */; };
 		6C4D158417DDDD0B00854E31 /* BCKCode11Code.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4D158317DDDD0B00854E31 /* BCKCode11Code.m */; };
@@ -323,6 +324,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		65115BD229D5C448001C046D /* BCKLocalizedStringFromTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCKLocalizedStringFromTable.h; sourceTree = "<group>"; };
 		6C2AF50E17D5EE3F00175AE0 /* BCKCode39FullASCII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCKCode39FullASCII.h; path = ../include/BarCodeKit/BCKCode39FullASCII.h; sourceTree = "<group>"; };
 		6C2AF50F17D5EE3F00175AE0 /* BCKCode39FullASCII.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCKCode39FullASCII.m; sourceTree = "<group>"; };
 		6C2AF51117D5EEAD00175AE0 /* BCKCode39FullASCIITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCKCode39FullASCIITest.m; sourceTree = "<group>"; };
@@ -1147,6 +1149,7 @@
 				A75BABD017BF7AB000A5A5A5 /* Codes */,
 				A721D0BD17FEFBD700A82189 /* iOS */,
 				A721D0C017FEFBD700A82189 /* Mac */,
+				65115BD229D5C448001C046D /* BCKLocalizedStringFromTable.h */,
 				6C93DE7917E1BF7A002F0BF5 /* NSError+BCKCode.h */,
 				6C93DE7A17E1BF7A002F0BF5 /* NSError+BCKCode.m */,
 				A730FFC418C09B4E00BABCDA /* BCKCodeFunctions.h */,
@@ -1236,6 +1239,7 @@
 				A7CFEF6317EE04E9006446C9 /* BarCodeKit.h in Headers */,
 				6CAD96F7180C0C0C002DFADB /* BCKPOSTNETCodeCharacter.h in Headers */,
 				A7CFEF9C17EE0544006446C9 /* BCKCode11Code.h in Headers */,
+				65115BD329D5C448001C046D /* BCKLocalizedStringFromTable.h in Headers */,
 				A7CFEF6C17EE04F2006446C9 /* BCKCodabarCodeCharacter.h in Headers */,
 				A7CFEFA217EE0548006446C9 /* BCKCode39FullASCII.h in Headers */,
 				A760681E181011D200BF00E8 /* BCKMutableBarString.h in Headers */,

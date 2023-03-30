@@ -9,6 +9,7 @@
 #import "BCKPharmacodeOneTrack.h"
 #import "BCKPharmaOneTrackContentCodeCharacter.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 // source: http://www.gomaro.ch/ftproot/Laetus_PHARMA-CODE.pdf
 
@@ -57,7 +58,7 @@
 		{
 			if (error)
 			{
-				NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Contents cannot be encoded in %@, only integer values between 3 and 131070 are supported", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+				NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Contents cannot be encoded in %@, only integer values between 3 and 131070 are supported", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
 				*error = [NSError BCKCodeErrorWithMessage:message];
 			}
 			
@@ -68,7 +69,7 @@
 	{
 		if (error)
 		{
-			NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Contents cannot be encoded in %@, only integer values between 3 and 131070 are supported", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+			NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Contents cannot be encoded in %@, only integer values between 3 and 131070 are supported", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
 			*error = [NSError BCKCodeErrorWithMessage:message];
 		}
 		

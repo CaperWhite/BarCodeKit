@@ -9,6 +9,7 @@
 #import "BCKInterleaved2of5Code.h"
 #import "BCKInterleaved2of5CodeCharacter.h"
 #import "NSError+BCKCode.h"
+#import "BCKLocalizedStringFromTable.h"
 
 @implementation BCKInterleaved2of5Code
 
@@ -41,7 +42,7 @@
 	{
 		if (error)
 		{
-			NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ requires content to be of even length", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
+			NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"%@ requires content to be of even length", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), [[self class] barcodeDescription]];
 			*error = [NSError BCKCodeErrorWithMessage:message];
 		}
 		
@@ -61,7 +62,7 @@
 			if (error)
 			{
 				//NSLog();
-				NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"Characters '%@' and '%@' cannot be encoded in %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), digit1, digit2, [[self class] barcodeDescription]];
+				NSString *message = [NSString stringWithFormat:BCKLocalizedStringFromTable(@"Characters '%@' and '%@' cannot be encoded in %@", @"BarCodeKit", @"The error message displayed when unable to generate a barcode."), digit1, digit2, [[self class] barcodeDescription]];
 				*error = [NSError BCKCodeErrorWithMessage:message];
 			}
 
