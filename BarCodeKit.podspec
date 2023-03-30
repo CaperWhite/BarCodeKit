@@ -5,9 +5,9 @@ Pod::Spec.new do |spec|
   spec.osx.deployment_target  = '10.12'
   spec.license      = 'BSD'
   spec.source       = { :git => 'https://github.com/Cocoanetics/BarCodeKit.git', :tag => spec.version.to_s }
-  spec.source_files = 'Core/Source/*.{h,m}', 'Core/*.h'
-  spec.ios.source_files = 'Core/Source/iOS/*.{h,m}' 
-  spec.osx.source_files = 'Core/Source/Mac/*.{h,m}'
+  spec.source_files = 'Sources/BarCodeKit/Source/*.{h,m}', 'Sources/BarCodeKit/include/BarCodeKit/*.h'
+  spec.ios.source_files = 'Sources/BarCodeKit/Source/iOS/*.{h,m}'
+  spec.osx.source_files = 'Sources/BarCodeKit/Source/Mac/*.{h,m}'
   spec.requires_arc = true
   spec.homepage     = 'http://www.cocoanetics.com/parts/barcodekit/'
   spec.summary      = 'A framework to generate bar codes on iOS or Mac.'

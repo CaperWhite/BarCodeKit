@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "BCKISSNCode.h"
+#import "BCKBarString.h"
 
 @interface BCKISSNCode () // private
 
