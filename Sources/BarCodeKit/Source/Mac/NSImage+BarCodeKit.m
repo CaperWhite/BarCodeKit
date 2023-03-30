@@ -5,6 +5,7 @@
 //  Created by Oliver Drobnik on 10/4/13.
 //  Copyright (c) 2013 Oliver Drobnik. All rights reserved.
 //
+#import <Foundation/Foundation.h>
 
 #if TARGET_OS_OSX
 
